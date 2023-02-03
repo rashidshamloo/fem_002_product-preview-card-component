@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+$cream: hsl(30, 38%, 92%);
+$darkCyan: hsl(158, 36%, 37%);
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $cream;
+  font-family: "Montserrat", sans-serif;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  min-height: 600px;
+  background-color: $white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.1);
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: content;
+  flex: 1 0 auto;
+  padding: 20px;
+  h1 {
+    font-family: "Fraunces", serif;
+    color: $veryDarkBlue;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+}
+.product-category {
+  color: $darkGrayishBlue;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+}
+.product-discription {
+  color: $darkGrayishBlue;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+.current-price {
+  font-family: "Fraunces", serif;
+  color: $darkCyan;
+  font-size: 1.8rem;
+}
+.previous-price {
+  color: $darkGrayishBlue;
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  position: relative;
+  top: -6px;
+  left: 12px;
+}
+.product-image {
+  background-image: url("images/image-product-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-basis: content;
+  min-height: 240px;
+}
+.product-info button {
+  color: $white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: $darkCyan;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: inherit;
+}
+button img {
+  margin-right: 10px;
+}
+@media only screen and (min-width: 480px) {
+  .product-card {
+    flex-direction: row;
+    max-width: 600px;
+    min-height: 450px;
+  }
+  .product-image {
+    flex-basis: 50%;
+    background-image: url("images/image-product-desktop.jpg");
+  }
+  .product-info {
+    flex-basis: 50%;
+  }
+}
