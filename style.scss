@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
 
+//color variables
 $cream: hsl(30, 38%, 92%);
 $darkCyan: hsl(158, 36%, 37%);
+$verydarkCyan: hsl(156, 59%, 25%);
 $veryDarkBlue: hsl(212, 21%, 14%);
 $darkGrayishBlue: hsl(228, 12%, 48%);
 $white: hsl(0, 0%, 100%);
@@ -24,8 +26,8 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
-  max-width: 375px;
-  min-height: 600px;
+  max-width: 342px;
+  min-height: 612px;
   background-color: $white;
   border-radius: 10px;
   overflow: hidden;
@@ -37,12 +39,33 @@ body {
   justify-content: space-between;
   flex-basis: content;
   flex: 1 0 auto;
-  padding: 20px;
+  padding: 24px;
   h1 {
     font-family: "Fraunces", serif;
     color: $veryDarkBlue;
-    font-size: 2.2rem;
-    line-height: 2.2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  button {
+    color: $white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: $darkCyan;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: inherit;
+  }
+  button:hover {
+    background-color: $verydarkCyan;
+    cursor: pointer;
+  }
+  button img {
+    margin-right: 10px;
   }
 }
 .product-category {
@@ -58,15 +81,15 @@ body {
 .current-price {
   font-family: "Fraunces", serif;
   color: $darkCyan;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .previous-price {
   color: $darkGrayishBlue;
   font-size: 0.8rem;
   text-decoration: line-through;
   position: relative;
-  top: -6px;
-  left: 12px;
+  top: -8px;
+  left: 14px;
 }
 .product-image {
   background-image: url("images/image-product-mobile.jpg");
@@ -75,24 +98,27 @@ body {
   flex-basis: content;
   min-height: 240px;
 }
-.product-info button {
-  color: $white;
-  font-weight: bold;
-  font-size: 0.9rem;
-  background-color: $darkCyan;
-  border-radius: 10px;
-  border: none;
-  width: 100%;
-  padding: 15px 0;
+footer {
+  padding: 10px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  font-family: inherit;
+  font-size: 0.8rem;
+  p {
+    color: hsl(220, 15%, 55%);
+    margin: 3px;
+  }
+  i {
+    font-size: 0.9rem;
+  }
+  a {
+    color: hsl(220, 15%, 55%);
+  }
+  a:hover {
+    color: hsl(218, 44%, 22%);
+    transition: 700ms;
+  }
 }
-button img {
-  margin-right: 10px;
-}
-@media only screen and (min-width: 480px) {
+
+@media only screen and (min-width: 4800px) {
   .product-card {
     flex-direction: row;
     max-width: 600px;
@@ -104,5 +130,6 @@ button img {
   }
   .product-info {
     flex-basis: 50%;
+    padding: 30px;
   }
 }

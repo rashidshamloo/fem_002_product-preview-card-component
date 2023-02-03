@@ -19,8 +19,8 @@ body {
 .product-card {
   display: flex;
   flex-direction: column;
-  max-width: 375px;
-  min-height: 600px;
+  max-width: 342px;
+  min-height: 612px;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
   overflow: hidden;
@@ -33,13 +33,34 @@ body {
   justify-content: space-between;
   flex-basis: content;
   flex: 1 0 auto;
-  padding: 20px;
+  padding: 24px;
 }
 .product-info h1 {
   font-family: "Fraunces", serif;
   color: hsl(212deg, 21%, 14%);
-  font-size: 2.2rem;
-  line-height: 2.2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.product-info button {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: hsl(158deg, 36%, 37%);
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: inherit;
+}
+.product-info button:hover {
+  background-color: hsl(156deg, 59%, 25%);
+  cursor: pointer;
+}
+.product-info button img {
+  margin-right: 10px;
 }
 
 .product-category {
@@ -57,7 +78,7 @@ body {
 .current-price {
   font-family: "Fraunces", serif;
   color: hsl(158deg, 36%, 37%);
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .previous-price {
@@ -65,8 +86,8 @@ body {
   font-size: 0.8rem;
   text-decoration: line-through;
   position: relative;
-  top: -6px;
-  left: 12px;
+  top: -8px;
+  left: 14px;
 }
 
 .product-image {
@@ -77,26 +98,27 @@ body {
   min-height: 240px;
 }
 
-.product-info button {
-  color: hsl(0deg, 0%, 100%);
-  font-weight: bold;
-  font-size: 0.9rem;
-  background-color: hsl(158deg, 36%, 37%);
-  border-radius: 10px;
-  border: none;
-  width: 100%;
-  padding: 15px 0;
+footer {
+  padding: 10px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  font-family: inherit;
+  font-size: 0.8rem;
+}
+footer p {
+  color: hsl(220deg, 15%, 55%);
+  margin: 3px;
+}
+footer i {
+  font-size: 0.9rem;
+}
+footer a {
+  color: hsl(220deg, 15%, 55%);
+}
+footer a:hover {
+  color: hsl(218deg, 44%, 22%);
+  transition: 700ms;
 }
 
-button img {
-  margin-right: 10px;
-}
-
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 4800px) {
   .product-card {
     flex-direction: row;
     max-width: 600px;
@@ -108,5 +130,6 @@ button img {
   }
   .product-info {
     flex-basis: 50%;
+    padding: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
